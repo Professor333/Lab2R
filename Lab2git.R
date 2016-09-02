@@ -170,7 +170,7 @@ t.test(g, h, alternative = "two.sided", mu = 0, paired = FALSE, var.equal = TRUE
 
 #Problem 5 uses variables e and f
 #Is first sample mean greater than second sample mean? Yes
-t.test(g, h, alternative = "greater", mu = 0, paired = FALSE, var.equal = FALSE)
+t.test(e, f, alternative = "greater", mu = 0, paired = FALSE, var.equal = FALSE)
 
 
 #Problem 6 uses variables i and j
