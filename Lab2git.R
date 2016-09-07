@@ -110,6 +110,7 @@ points(means1,col="red",pch=18)
 
 #Problem 2: Sample mean different from pop. mean?
 t.test(b, alternative = "two.sided", mu = 0, paired = FALSE, var.equal = FALSE)
+
 #Yes, sample mean is different.
 
 #Are my samples normal?
@@ -194,6 +195,10 @@ t.test(aa, bb, alternative = "two.sided", mu = 0, paired = FALSE, var.equal = FA
 randomA=rnorm(100, mean=0, sd=2000)
 randomB=rnorm(100, mean=100, sd=4000)
 
+#Wilcox Test
+wilcox.test(randomA)
+wilcox.test(randomB)
+
 t.test(randomA, randomB, alternative = "two.sided", mu = 0, paired = FALSE, var.equal = FALSE)
 #Collect P-value
 t.test(randomA, randomB, alternative = "two.sided", mu = 0, paired = FALSE, var.equal = TRUE)
@@ -207,7 +212,9 @@ p1=0.9013
 p2=0.9012
 p3=0.6363
 p4=0.6364
-pvalues=c(p1,p2,p3,p4)
+p5=0.482
+p6=0.1919
+pvalues=c(p1,p2,p3,p4,p5,p6)
 plot(pvalues)
 
 
